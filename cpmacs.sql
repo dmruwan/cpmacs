@@ -1,9 +1,30 @@
-drop database cpmacs;
+-- phpMyAdmin SQL Dump
+-- version 3.5.2.2
+-- http://www.phpmyadmin.net
+--
+-- Host: localhost
+-- Generation Time: Sep 27, 2014 at 06:24 PM
+-- Server version: 5.5.27-log
+-- PHP Version: 5.3.28
 
-create database cpmacs;
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
 
-use cpmacs;
 
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+--
+-- Database: `cat_alert`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `admin`
+--
 
 CREATE TABLE IF NOT EXISTS `admin` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -43,7 +64,7 @@ CREATE TABLE IF NOT EXISTS `app` (
 --
 
 INSERT INTO `app` (`id`, `app_name`, `dev_id`, `public_url`, `repo_url`, `image_url`, `banner_img`, `is_approved`, `charge_user`, `payment_type`, `description`, `category`, `price`, `rating`) VALUES
-(1, 'Jackpot', 1, 'http://www.manitaz.com/Jackpot/index.html', NULL, 'http://manitaz.com/wshack/icons/casino.png', 'http://manitaz.com/wshack/cover/cover10.png', 1, 0, 1, 'This is sample jackpot application. dada dasndij ndasijnd nduasid nudasdj ncudsjof nsioad nduo nusda udaodjoiad jiofda ', 4, '0.00', 5);
+(1, 'Jackpot', 1, 'http://www.manitaz.com/Jackpot/index.html', NULL, 'http://itraveller.manitaz.com/thumb_img/coombo_national_musi.png', 'http://itraveller.manitaz.com/images/pigoun_island/image4.png', 1, 0, 1, 'This is sample jackpot application. dada dasndij ndasijnd nduasid nudasdj ncudsjof nsioad nduo nusda udaodjoiad jiofda ', 2, 0.00, 5);
 
 -- --------------------------------------------------------
 
@@ -191,3 +212,7 @@ CREATE TABLE IF NOT EXISTS `payment_type` (
   `type` varchar(45) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
