@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Sep 27, 2014 at 01:38 AM
+-- Generation Time: Sep 27, 2014 at 06:24 PM
 -- Server version: 5.5.27-log
 -- PHP Version: 5.3.28
 
@@ -64,7 +64,7 @@ CREATE TABLE IF NOT EXISTS `app` (
 --
 
 INSERT INTO `app` (`id`, `app_name`, `dev_id`, `public_url`, `repo_url`, `image_url`, `banner_img`, `is_approved`, `charge_user`, `payment_type`, `description`, `category`, `price`, `rating`) VALUES
-(1, 'Jackpot', 1, NULL, NULL, 'http://itraveller.manitaz.com/thumb_img/coombo_national_musi.png', 'http://itraveller.manitaz.com/images/pigoun_island/image4.png', 1, 0, 1, 'This is sample jackpot application. dada dasndij ndasijnd nduasid nudasdj ncudsjof nsioad nduo nusda udaodjoiad jiofda ', 2, 0.00, 5);
+(1, 'Jackpot', 1, 'http://www.manitaz.com/Jackpot/index.html', NULL, 'http://itraveller.manitaz.com/thumb_img/coombo_national_musi.png', 'http://itraveller.manitaz.com/images/pigoun_island/image4.png', 1, 0, 1, 'This is sample jackpot application. dada dasndij ndasijnd nduasid nudasdj ncudsjof nsioad nduo nusda udaodjoiad jiofda ', 2, 0.00, 5);
 
 -- --------------------------------------------------------
 
@@ -104,6 +104,16 @@ CREATE TABLE IF NOT EXISTS `app_category` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `app_category`
+--
+
+INSERT INTO `app_category` (`id`, `category`, `description`) VALUES
+(1, 'Entertainment', NULL),
+(2, 'Sports', NULL),
+(3, 'Education', NULL),
+(4, 'Games', NULL);
+
 -- --------------------------------------------------------
 
 --
@@ -114,10 +124,17 @@ CREATE TABLE IF NOT EXISTS `app_register` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `user_id` int(11) NOT NULL,
   `app_id` int(11) NOT NULL,
-  `rating` int(11) DEFAULT NULL,
+  `rating` int(11) DEFAULT '0',
   `reg_date` date NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `app_register`
+--
+
+INSERT INTO `app_register` (`id`, `user_id`, `app_id`, `rating`, `reg_date`) VALUES
+(1, 1, 1, 2, '2014-09-27');
 
 -- --------------------------------------------------------
 
